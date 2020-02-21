@@ -1,0 +1,41 @@
+public class AlienLanguage
+{
+    public static void main(String[] args)
+    {
+        blurb();
+    }
+
+    public static void blurb()
+    {
+        whoozit();
+        whatzit((int)((Math.random() * 10) + 1));
+    }
+
+    public static void whoozit()
+    {
+        System.out.print("x");
+        for (int i = 0; i < (int)(Math.random() * 10); i++)
+        {
+            System.out.print("y");
+        }
+    }
+
+
+    public static void whatzit(int numWhatzits)
+    {
+        if (numWhatzits > 0)
+        {
+            System.out.print("q");
+            if ((int) (Math.random() * 2) == 0)
+            {
+                System.out.print("z");
+            }
+            else
+            {
+                System.out.print("d");
+            }
+            whoozit();
+            whatzit(numWhatzits - 1);
+        }
+    }
+}
